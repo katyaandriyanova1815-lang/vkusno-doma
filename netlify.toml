@@ -1,0 +1,9 @@
+[build]
+  command = "python3 build.py && cp index.html public/index.html"
+  publish = "public"
+  functions = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "camera=(self)"
